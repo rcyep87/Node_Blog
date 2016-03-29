@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create a new blog post</title>
+		<link rel="stylesheet" href="<%= env === 'development' ? '/styles/main.scss.css' : '/styles/main.scss.min.css?'+version %>" />
+
+	</head>
+	<body>
+		<h1>Create a new blog post</h1>
+    <form action="/post/create" method="post">
+      <div>
+        Title: <input type="text" name="title">
+      </div>
+      <div>
+        Content: <textarea name="content"></textarea>
+      </div>
+      <button type="submit">Create post</button>
+    </form>
+		<script type="text/javascript" src="<%= env === 'development' ? '/scripts/bundle.js' : '/scripts/bundle.min.js?'+version %>"></script>
+	</body>
+</html>
